@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: #f15e35;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.design-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 90vh;
+  width: 100%;
+}
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+  padding: 5vh;
+  height: 40%;
+  width: 100%;
+}
+
+.twotoone-box {
+  position: relative;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twotoone-box:before {
+  content: '';
+  float: left;
+  padding-top: 50%;
+}
+
+.preview-content {
+  float: left;
+}
+
+.image-box {
+  position: relative;
+  width: 47%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-25%);
+  padding: 0.2vw;
+  background-color: black;
+}
+
+.image-box:before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}
+
+.preview-item {
+  margin: 1vh 2vw;
+}
+
+.options-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 60%;
+  width: 100%;
+}
+
+.options-subcontainer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+
+.button-container {
+  margin: 1vh 2vw;
+}
+
+.vinyl {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 45%;
+  height: 90%;
+  z-index: -1;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: black;
+  width: 15%;
+  height: 30%;
+  z-index: -1;
+}
+
