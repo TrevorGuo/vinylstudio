@@ -80,6 +80,7 @@
   justify-content: space-around;
   height: 60%;
   width: 100%;
+  background-color: lightgray;
 }
 
 .options-subcontainer {
