@@ -27,7 +27,7 @@ export default function Preview(props) {
             <div className='vinyl'
                 style={{backgroundColor: color}}/>
             {color !== '' && <div className='center'/>}
-            <div className='preview-item'>
+            <div className='text'>
                 {title}<br/>
                 {subtitle}<br/>
                 {third}<br/>
