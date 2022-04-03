@@ -132,10 +132,3 @@
   font-size: 1vw;
 }
 
-.test {
-  background-image: url('./pog.png');
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
-}
-
