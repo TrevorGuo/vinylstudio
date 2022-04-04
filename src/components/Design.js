@@ -18,7 +18,7 @@ export default function Design() {
         <div className='design-container'>
             <div className='title-container'>
                 <div>
-                    DREAM VINYL
+                    DESIGNYL
                 </div>
             </div>
             <div className='preview-container'>
