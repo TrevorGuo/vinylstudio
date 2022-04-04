@@ -17,9 +17,8 @@ export default function Design() {
     return(
         <div className='design-container'>
             <div className='title-container'>
-                <div>
-                    DESIGNYL
-                </div>
+                <img src="/images/goldrushlogo.png" style={{height: '4vh', marginRight: '0.75vw'}}/>
+                DESIGNYL
             </div>
             <div className='preview-container'>
                 <Preview 

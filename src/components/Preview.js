@@ -43,10 +43,10 @@ export default function Preview(props) {
             {(imageList.length === 1 && hasJacket) && 
             <div className='image-box'>
                 <img 
-                src={imageList[0]['data_url']} 
-                alt='Your Jacket Cover'
-                object-fit='cover'
-                z-index='10'/>
+                    src={imageList[0]['data_url']} 
+                    alt='Your Jacket Cover'
+                    className='image'
+                />
             </div>}
             {/* Make a vinyl component that takes in the text as props */}
         </Box>
