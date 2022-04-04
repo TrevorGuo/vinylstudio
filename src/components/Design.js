@@ -16,6 +16,11 @@ export default function Design() {
 
     return(
         <div className='design-container'>
+            <div className='title-container'>
+                <div>
+                    DREAM VINYL
+                </div>
+            </div>
             <div className='preview-container'>
                 <Preview 
                     hasFrame={hasFrame}

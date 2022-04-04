@@ -11,38 +11,41 @@ export default function VinylText(props) {
 
     return(
         <div className='options-subcontainer'>
+            <span>Custom Title For Top Of Record Center Label <span style={{color: 'red'}}>*</span></span>
             <TextField
                 required
-                label='Title'
                 value={title}
+                placeholder="ex: She's Feeling 22"
                 onChange={event => {
                     setTitle(event.target.value);
                 }}
                 sx={{
                     overflow: 'visible',
-                    width: 200,
+                    width: 275,
                 }}
             />
+            Custom Subtitle for Top of Record Center Label (Optional)
             <TextField
-                label='Subtitle'
                 value={subtitle}
+                placeholder="ex: Happy birthday, best friend!"
                 onChange={event => {
                     setSubtitle(event.target.value);
                 }}
                 sx={{
                     overflow: 'visible',
-                    width: 200,
+                    width: 275,
                 }}
             />
+            URL of Playlist from Spotify, Apple Music, YouTube Music (Optional)
             <TextField
-                label='Third line'
                 value={third}
+                placeholder="ex: https://open.spotify.com/playlist/"
                 onChange={event => {
                     setThird(event.target.value);
                 }}
                 sx={{
                     overflow: 'visible',
-                    width: 200,
+                    width: 275,
                 }}
             />
         </div>

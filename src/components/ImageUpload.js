@@ -26,7 +26,9 @@ export default function ImageUpload(props) {
                         onClick={onImageUpload}
                         variant='filled'
                         sx={{
-                            color: '#f15e35'
+                            color: '#f15e35',
+                            backgroundColor: 'white',
+                            border: '1px #f15e35 solid'
                         }}
                     >
                         Upload Image

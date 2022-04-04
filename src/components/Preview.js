@@ -22,6 +22,7 @@ export default function Preview(props) {
     }
 
     return(
+        hasJacket ? 
         <Box 
             className='twotoone-box'
             sx={hasFrame && {border: '15px black solid'}}
@@ -48,6 +49,24 @@ export default function Preview(props) {
                 z-index='10'/>
             </div>}
             {/* Make a vinyl component that takes in the text as props */}
+        </Box>
+        :
+        <Box
+            className='onetoone-box'
+            sx={hasFrame && {border: '15px black solid'}}
+        >
+            <div className='vinyl-square'
+                style={{backgroundColor: colors[color]}}/>
+            {color !== '' && 
+                <div className='center-square'>
+                    <div className='text'>
+                        {title}<br/>
+                        <br/>
+                        {subtitle}<br/>
+                        {third}<br/>
+                    </div>
+                </div>
+            }
         </Box>
     );
 }
