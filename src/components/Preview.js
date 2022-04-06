@@ -18,8 +18,9 @@ export default function Preview(props) {
         pink: '#f34784',
         orange: '#eba000',
         black: '#2e2e2e',
-
     }
+
+    const grooveWidths = [20,25,30,35,40];
 
     return(
         hasJacket ? 
@@ -29,13 +30,26 @@ export default function Preview(props) {
         >
             <div className='vinyl'
                 style={{backgroundColor: colors[color]}}/>
+
+            {grooveWidths.map(width => {
+                console.log(`${width}%`);
+                return (
+                    <div    className='vinyl-groove' 
+                            style={{width: `${width}%`, height: `${2 * width}%`}} />
+                );
+            })}
+            
             {color !== '' && 
                 <div className='center'>
-                    <div className='text'>
-                        {title}<br/>
-                        <br/>
-                        {subtitle}<br/>
-                        {third}<br/>
+                    <div className='text-wrapper'>
+                        <div className='text'>
+                            <p>
+                                {title === "" ? <br/> : title}<br/>
+                                <br/>
+                                {subtitle}<br/>
+                                {third}<br/>
+                            </p>
+                        </div>
                     </div>
                 </div>
             }
@@ -57,13 +71,27 @@ export default function Preview(props) {
         >
             <div className='vinyl-square'
                 style={{backgroundColor: colors[color]}}/>
+
+            {color !== '' &&
+                grooveWidths.map(width => {
+                    console.log(`${width}%`);
+                    return (
+                        <div className='vinyl-square-groove' style={{width: `${2 * width}%`, height: `${2 * width}%`}} />
+                    );
+                })
+            }
+
             {color !== '' && 
                 <div className='center-square'>
-                    <div className='text'>
-                        {title}<br/>
-                        <br/>
-                        {subtitle}<br/>
-                        {third}<br/>
+                    <div className='text-wrapper'>
+                        <div className='text'>
+                            <p>
+                                {title === "" ? <br/> : title}<br/>
+                                <br/>
+                                {subtitle}<br/>
+                                {third}<br/>
+                            </p>
+                        </div>
                     </div>
                 </div>
             }
