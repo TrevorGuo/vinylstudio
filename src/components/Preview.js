@@ -31,13 +31,14 @@ export default function Preview(props) {
             <div className='vinyl'
                 style={{backgroundColor: colors[color]}}/>
 
-            {grooveWidths.map(width => {
-                console.log(`${width}%`);
-                return (
-                    <div    className='vinyl-groove' 
-                            style={{width: `${width}%`, height: `${2 * width}%`}} />
-                );
-            })}
+            {color !== '' && 
+                grooveWidths.map(width => {
+                    return (
+                        <div    className='vinyl-groove' 
+                                style={{width: `${width}%`, height: `${2 * width}%`}} />
+                    );
+                })
+            }
             
             {color !== '' && 
                 <div className='center'>
@@ -74,7 +75,6 @@ export default function Preview(props) {
 
             {color !== '' &&
                 grooveWidths.map(width => {
-                    console.log(`${width}%`);
                     return (
                         <div className='vinyl-square-groove' style={{width: `${2 * width}%`, height: `${2 * width}%`}} />
                     );
