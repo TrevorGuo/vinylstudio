@@ -48,7 +48,9 @@ export default function Preview(props) {
                                 {title === "" ? <br/> : title}<br/>
                                 <br/>
                                 {subtitle}<br/>
-                                {third}<br/>
+                                {third !== '' &&
+                                    <p><img src='/images/spotifyqr.jpeg' width='55vw'/></p>
+                                }<br/>
                             </p>
                         </div>
                     </div>
@@ -89,7 +91,9 @@ export default function Preview(props) {
                                 {title === "" ? <br/> : title}<br/>
                                 <br/>
                                 {subtitle}<br/>
-                                {third}<br/>
+                                {third !== '' &&
+                                    <img src='/images/spotifyqr.jpeg' alt='Spotify QR Code'/>
+                                }<br/>
                             </p>
                         </div>
                     </div>
