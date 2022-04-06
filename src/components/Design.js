@@ -3,16 +3,29 @@ import ColorSelect from "./ColorSelect";
 import ImageUpload from "./ImageUpload";
 import Preview from "./Preview";
 import ProductSelect from "./ProductSelect";
+import ResetButton from "./ResetButton";
 import VinylText from "./VinylText";
 
 export default function Design() {
     const [hasFrame, setHasFrame] = useState(false);
     const [hasJacket, setHasJacket] = useState(false);
+    const [product, setProduct] = useState('');
     const [imageList, setImage] = useState([]);
     const [color, setColor] = useState('');
     const [title, setTitle] = useState('');
     const [subtitle, setSubtitle] = useState('');
     const [third, setThird] = useState('');
+
+    const handleReset = () => {
+        setHasFrame(false);
+        setHasJacket(false);
+        setProduct('');
+        setImage([]);
+        setColor('');
+        setTitle('');
+        setSubtitle('');
+        setThird('');
+    }
 
     return(
         <div className='design-container'>
@@ -34,6 +47,8 @@ export default function Design() {
             <div className='options-container'>
                 <div className='options-subcontainer'>
                     <ProductSelect 
+                        product={product}
+                        setProduct={setProduct}
                         setHasFrame={setHasFrame}
                         setHasJacket={setHasJacket}
                     />
@@ -55,6 +70,9 @@ export default function Design() {
                         hasJacket={hasJacket}
                         imageList={imageList} 
                         setImage={setImage}
+                    />
+                    <ResetButton
+                        handleReset={handleReset}
                     />
                 </div>
             </div>

@@ -11,7 +11,7 @@ export default function ImageUpload(props) {
 
     return(
         hasJacket ? 
-        <div className='options-subcontainer'>
+        <div className='button-container'>
             <ImageUploading
                 value={imageList}
                 onChange={onChange}

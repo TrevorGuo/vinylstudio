@@ -5,8 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export default function ProductSelect(props) {
-    const {setHasFrame, setHasJacket} = props;
-    const [product, setProduct] = useState('');
+    const {product, setProduct, setHasFrame, setHasJacket} = props;
 
     const handleChange = event => {
         setProduct(event.target.value);
@@ -14,18 +13,22 @@ export default function ProductSelect(props) {
             case 'framed':
                 setHasFrame(true);
                 setHasJacket(false);
+                setProduct('framed');
                 break;
             case 'jacket':
                 setHasFrame(false);
                 setHasJacket(true);
+                setProduct('jacket');
                 break;
             case 'framedjacket':
                 setHasFrame(true);
                 setHasJacket(true);
+                setProduct('framedjacket');
                 break;
             default:
                 setHasFrame(false);
                 setHasJacket(false);
+                setProduct('');
                 break;
         }
     }

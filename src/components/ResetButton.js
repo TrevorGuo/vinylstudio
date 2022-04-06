@@ -2,10 +2,13 @@ import React from "react";
 import { Button } from "@mui/material";
 import '../App.css';
 
-export default function CheckoutButton() {
+export default function ResetButton(props) {
+    const {handleReset} = props;
+
     return (
         <div className='button-container'>
             <Button
+                onClick={handleReset}
                 variant='contained'
                 sx={{
                     backgroundColor: '#f15e35',
@@ -14,7 +17,7 @@ export default function CheckoutButton() {
                     }
                 }}
             >
-                Checkout
+                Reset
             </Button>
         </div>
     )
