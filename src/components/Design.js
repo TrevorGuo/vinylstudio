@@ -30,8 +30,15 @@ export default function Design() {
     return(
         <div className='design-container'>
             <div className='title-container'>
-                <img src="/images/goldrushlogo.png" style={{height: '4vh', marginRight: '0.75vw'}}/>
-                Designyl
+                <div className='title'>
+                    <a href='https://www.goldrushvinyl.com/dream-vinyl' target='_blank'><img src="/images/goldrushlogo.png" className='social-icon'/></a>
+                    <div>Designyl</div>
+                </div>
+                <div className='social-media'>
+                    <a href='https://www.instagram.com/goldrushvinyl/' target='_blank'><img src="/images/instagram.png" className='social-icon'/></a>
+                    <a href='https://www.facebook.com/goldrushvinyl/'target='_blank'><img src='/images/facebook.png' className='social-icon'/></a>
+                    <a href='https://twitter.com/goldrushvinyl' target='_blank'><img src='/images/twitter.png' className='social-icon'/></a>
+                </div>
             </div>
             <div className='preview-container'>
                 <Preview 
