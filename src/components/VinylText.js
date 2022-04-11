@@ -1,13 +1,25 @@
 import React, {useState} from "react";
 import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from "@mui/material/InputLabel";
+import Select from '@mui/material/Select';
+import MenuItem from "@mui/material/MenuItem";
 
 export default function VinylText(props) {
     const { title,
             subtitle,
             third,
+            titleFontSize,
             setTitle,
             setSubtitle,
-            setThird} = props;
+            setThird,
+            setTitleFontSize} = props;
+
+    const fontSizes = [8,10,12,14,16,20,24];
+
+    const handleChange = (event) => {
+        setTitleFontSize(event.target.value);
+    }
 
     return(
         <div className='options-subcontainer'>
@@ -19,11 +31,23 @@ export default function VinylText(props) {
                 onChange={event => {
                     setTitle(event.target.value);
                 }}
-                sx={{
-                    overflow: 'visible',
-                    width: 275,
-                }}
+                className='text-field'
             />
+                {/* <FormControl fullWidth sx={{overflow: 'visible'}}>
+                    <InputLabel sx={{marginLeft: '1vw', overflow: 'visible'}}>Size</InputLabel>
+                    <Select
+                        value={titleFontSize}
+                        label="Size"
+                        className='font-size-select'
+                        onChange={handleChange}
+                    >
+                        {fontSizes.map(fontSize => {
+                            return(
+                                <MenuItem value={fontSize}>{fontSize}</MenuItem>
+                            )
+                        })}
+                    </Select>
+                </FormControl> */}
             Custom Subtitle for Top of Record Center Label (Optional)
             <TextField
                 value={subtitle}
@@ -31,10 +55,7 @@ export default function VinylText(props) {
                 onChange={event => {
                     setSubtitle(event.target.value);
                 }}
-                sx={{
-                    overflow: 'visible',
-                    width: 275,
-                }}
+                className='text-field'
             />
             URL of Playlist from Spotify, Apple Music, YouTube Music (Optional)
             <TextField
@@ -43,10 +64,7 @@ export default function VinylText(props) {
                 onChange={event => {
                     setThird(event.target.value);
                 }}
-                sx={{
-                    overflow: 'visible',
-                    width: 275,
-                }}
+                className='text-field'
             />
         </div>
     );

@@ -9,6 +9,7 @@ export default function Preview(props) {
             title,
             subtitle,
             third,
+            titleFontSize,
             } = props;
 
     const colors = {

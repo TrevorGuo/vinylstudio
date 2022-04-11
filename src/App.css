@@ -295,3 +295,20 @@
   shape-margin: 7%;
 }
 
+.text-options-row {
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+}
+
+.text-field {
+  overflow: visible;
+  width: 26vw;
+  margin-right: 1vw;
+}
+
+.font-size-select {
+  width: 7vw;
+  margin-left: 1vw;
+}
+

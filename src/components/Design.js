@@ -15,6 +15,7 @@ export default function Design() {
     const [title, setTitle] = useState('');
     const [subtitle, setSubtitle] = useState('');
     const [third, setThird] = useState('');
+    const [titleFontSize, setTitleFontSize] = useState(10);
 
     const handleReset = () => {
         setHasFrame(false);
@@ -32,7 +33,7 @@ export default function Design() {
             <div className='title-container'>
                 <div className='title'>
                     <a href='https://www.goldrushvinyl.com/dream-vinyl' target='_blank'><img src="/images/goldrushlogo.png" className='social-icon'/></a>
-                    <div>Designyl</div>
+                    <div>DESIGNYL</div>
                 </div>
                 <div className='social-media'>
                     <a href='https://www.instagram.com/goldrushvinyl/' target='_blank'><img src="/images/instagram.png" className='social-icon'/></a>
@@ -49,6 +50,7 @@ export default function Design() {
                     title={title}
                     subtitle={subtitle}
                     third={third}
+                    titleFontSize={titleFontSize}
                 />
             </div>
             <div className='options-container'>
@@ -67,10 +69,12 @@ export default function Design() {
                 <VinylText 
                     title={title} 
                     subtitle={subtitle} 
-                    third={third} 
+                    third={third}
+                    titleFontSize={titleFontSize}
                     setTitle={setTitle}
                     setSubtitle={setSubtitle}
-                    setThird={setThird}    
+                    setThird={setThird}   
+                    setTitleFontSize={setTitleFontSize} 
                 />
                 <div className='options-subcontainer'>
                     <ImageUpload 
